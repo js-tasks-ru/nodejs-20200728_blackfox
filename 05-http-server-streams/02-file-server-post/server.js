@@ -15,7 +15,7 @@ server.on('request', (req, res) => {
   req.on('aborted', () => {
     fs.unlink(filepath, (err) => {
       if (!err) {
-        console.log(`file successfully ${filepath} removed`);
+        // console.log(`file successfully ${filepath} removed`);
       }
     });
   });
@@ -47,7 +47,7 @@ server.on('request', (req, res) => {
               res.end('File is too big');
               fs.unlink(filepath, (err) => {
                 if (!err) {
-                  console.log(`File successfully ${filepath} removed`);
+                  // console.log(`File successfully ${filepath} removed`);
                 }
               });
             })
